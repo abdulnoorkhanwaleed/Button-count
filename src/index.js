@@ -14,16 +14,16 @@ class Employee extends Component{
   let count=this.state.count;
   let name=this.state.name;
 
-  if (count===1){
+  if (count===0){
     name="PIAIC BOOTCAMP"
   }
-  if(count===2){
+  if(count===1){
     name="PIAIC FAISAILABAD"
   }
-  if(count===3){
+  if(count===2){
     name="Sir Zia Khan is My Mentor "
   }
-  if(count===4){
+  if(count===3){
     name="Thanks for your services"
   }
     this.setState({count: ++count});
