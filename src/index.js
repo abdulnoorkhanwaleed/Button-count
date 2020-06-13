@@ -21,7 +21,10 @@ class Employee extends Component{
     name="PIAIC FAISAILABAD"
   }
   if(count===3){
-    name="Sir Zia Khan is My Mentor"
+    name="Sir Zia Khan is My Mentor "
+  }
+  if(count===4){
+    name="Thanks for your services"
   }
     this.setState({count: ++count});
     this.setState({name: name});
