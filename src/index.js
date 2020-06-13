@@ -1,17 +1,41 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, { Component } from 'react';
+import ReactDom from 'react-dom';
+class Employee extends Component{
+  constructor(props){
+    super(props);
+    this.state={
+      name: this.props.name,
+      count: this.props.count,
+    }
+    this.clickme=this.clickme.bind(this);
+  }
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  clickme() {
+  let count=this.state.count;
+  let name=this.state.name;
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  if (count===1){
+    name="PIAIC BOOTCAMP"
+  }
+  if(count===2){
+    name="PIAIC FAISAILABAD"
+  }
+  if(count===3){
+    name="Sir Zia Khan is My Mentor"
+  }
+    this.setState({count: ++count});
+    this.setState({name: name});
+    
+  }
+  render(){
+    return(
+      <>
+        <h1> {this.state.name} </h1>
+        <h1>Total Click : {this.state.count}</h1>
+        <button onClick={this.clickme}>Click to count</button>
+      </>
+    )
+  }
+
+}
+ReactDom.render(<Employee name="Assignment Practice" count="0"/>, document.getElementById('root'))
