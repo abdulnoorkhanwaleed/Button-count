@@ -41,4 +41,4 @@ class Employee extends Component{
   }
 
 }
-ReactDom.render(<Employee name="Assignment Practice" count="0"/>, document.getElementById('root'))
+ReactDom.render(<Employee name="Assignment Practice" count="1"/>, document.getElementById('root'))
